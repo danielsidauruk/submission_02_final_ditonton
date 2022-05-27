@@ -6,7 +6,6 @@ import 'package:mockito/annotations.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:tv_series/tv_series.dart';
 
-import '../../dummy_data/dummy_object.dart';
 import 'tv_series_detail_page_test.dart';
 
 class MockWatchlistTVSeriesBloc
@@ -58,7 +57,7 @@ void main() {
   testWidgets('Page should display ListView when data is loaded',
       (WidgetTester tester) async {
     when(() => mockTVSeriesWatchlistBloc.state)
-        .thenReturn(TVSeriesWatchlistHasData(testTVSeriesList));
+      .thenReturn(const TVSeriesWatchlistHasData(<TVSeries>[]));
 
     final listViewFinder = find.byType(ListView);
 
@@ -66,7 +65,6 @@ void main() {
 
     expect(listViewFinder, findsOneWidget);
   });
-
   testWidgets('Page should display text with message when Error',
       (WidgetTester tester) async {
     when(() => mockTVSeriesWatchlistBloc.state)

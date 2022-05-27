@@ -6,8 +6,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:movie/movie.dart';
 
-import '../../dummy_data/dummy_objects.dart';
-
 class MockMovieWatchlistBloc extends MockBloc<MovieWatchlistEvent, MovieWatchlistState>
     implements MovieWatchlistBloc {}
 
@@ -50,7 +48,7 @@ void main() {
   });
 
   testWidgets('Page should display ListView when data is loaded', (WidgetTester tester) async {
-    when(() => mockMovieWatchlistBloc.state).thenReturn(MovieWatchlistHasData(testMovieList));
+    when(() => mockMovieWatchlistBloc.state).thenReturn(const MovieWatchlistHasData(<Movie>[]));
 
     final listViewFinder = find.byType(ListView);
 
