@@ -1,0 +1,49 @@
+name: ditonton
+description: A new Flutter application.
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  about:
+    path: about
+  core:
+    path: core
+  movie:
+    path: movie
+  tv_series:
+    path: tv_series
+
+  cupertino_icons: ^1.0.2
+  http: ^0.13.4
+  dartz: ^0.10.1
+  equatable: ^2.0.3
+  google_fonts: ^2.1.0
+  flutter_rating_bar: ^4.0.0
+  cached_network_image: ^3.2.0
+  get_it: ^7.2.0
+  sqflite: ^2.0.2
+  path_provider: ^2.0.2
+  flutter_bloc: ^7.3.0
+  rxdart: ^0.27.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  analyzer: ^2.8.0
+  mockito: ^5.0.8
+  build_runner: ^2.0.4
+  bloc_test: ^8.0.1
+  flutter_lints: ^1.0.4
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/

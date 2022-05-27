@@ -1,0 +1,31 @@
+name: movie
+description: A new Flutter package project.
+version: 0.0.1
+homepage:
+
+environment:
+  sdk: ">=2.16.2 <3.0.0"
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  core:
+    path: ../core
+  tv_series:
+    path: ../tv_series
+
+  dartz: ^0.10.1
+  flutter_bloc: ^7.3.0
+  rxdart: ^0.27.1
+  firebase_crashlytics: ^2.6.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^1.0.4
+  mockito: ^5.0.8
+  build_runner: ^2.0.4
+  bloc_test: ^8.0.1
+
+flutter:

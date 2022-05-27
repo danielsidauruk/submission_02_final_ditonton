@@ -1,0 +1,36 @@
+name: core
+description: A new Flutter package project.
+version: 0.0.1
+homepage:
+
+environment:
+  sdk: ">=2.16.2 <3.0.0"
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  movie:
+    path: ../movie
+  tv_series:
+    path: ../tv_series
+
+  equatable: ^2.0.3
+  google_fonts: ^2.1.0
+  dartz: ^0.10.1
+  sqflite: ^2.0.2
+  cached_network_image: ^3.1.0
+  flutter_rating_bar: ^4.0.0
+  flutter_bloc: ^7.3.0
+  rxdart: ^0.27.1
+  firebase_crashlytics: ^2.2.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^1.0.4
+  mockito: ^5.0.8
+  build_runner: ^2.0.4
+  bloc_test: ^8.0.1
+
+flutter:
