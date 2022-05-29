@@ -1,8 +1,5 @@
 library tv_series;
 
-export 'presentation/pages/watchlist_tv_series_page.dart';
-export 'presentation/pages/tv_series_home_page.dart';
-
 // data -> datasources -> database
 export 'data/datasources/database/database_helper_tv_series.dart';
 

@@ -11,7 +11,7 @@
       ],
       "id": 1,
       "name": "name",
-      "original_name": "originalName",
+       "original_name": "originalName",
       "overview": "overview",
       "popularity": 1.0,
       "poster_path": "/path.jpg",

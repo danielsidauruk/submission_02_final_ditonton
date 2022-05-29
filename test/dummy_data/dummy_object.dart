@@ -9,7 +9,7 @@ final testMovie = Movie(
   id: 557,
   originalTitle: 'Spider-Man',
   overview:
-  'After being bitten by a genetically altered spider, nerdy high school student Peter Parker is endowed with amazing powers to become the Amazing superhero known as Spider-Man.',
+      'After being bitten by a genetically altered spider, nerdy high school student Peter Parker is endowed with amazing powers to become the Amazing superhero known as Spider-Man.',
   popularity: 60.441,
   posterPath: '/rweIrveL43TaxUN0akQEaAXL6x0.jpg',
   releaseDate: '2002-05-01',
@@ -62,7 +62,7 @@ final testTVSeries = TVSeries(
   genreIds: const [10759, 18, 10765],
   id: 1402,
   overview:
-  'Sheriff\'s deputy Rick Grimes awakens from a coma to find a post-apocalyptic world dominated by flesh-eating zombies. He sets out to find his family and encounters many other survivors along the way.',
+      'Sheriff\'s deputy Rick Grimes awakens from a coma to find a post-apocalyptic world dominated by flesh-eating zombies. He sets out to find his family and encounters many other survivors along the way.',
   popularity: 1832.419,
   posterPath: '/xf9wuDcqlUPWABZNeDKPbZUjWx0.jpg',
   firstAirDate: '2010-10-31',
@@ -85,7 +85,7 @@ final testTv = TVSeries(
   name: 'Arcane',
   originalName: 'Arcane',
   overview:
-  'Amid the stark discord of twin cities Piltover and Zaun, two sisters fight on rival sides of a war between magic technologies and clashing convictions.',
+      'Amid the stark discord of twin cities Piltover and Zaun, two sisters fight on rival sides of a war between magic technologies and clashing convictions.',
   popularity: 218.007,
   posterPath: '/fqldf2t8ztc9aiwn3k6mlX3tvRT.jpg',
   voteAverage: 9.1,

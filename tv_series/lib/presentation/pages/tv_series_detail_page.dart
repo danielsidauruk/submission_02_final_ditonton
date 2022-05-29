@@ -133,7 +133,8 @@ class DetailContent extends StatelessWidget {
                                       } else if (state.isAdded == true) {
                                         context
                                             .read<TVSeriesWatchlistBloc>()
-                                            .add(DeleteWatchlistTVSeries(detail));
+                                            .add(DeleteWatchlistTVSeries(
+                                                detail));
                                       }
                                     }
                                   },
@@ -175,8 +176,7 @@ class DetailContent extends StatelessWidget {
                                 RatingBarIndicator(
                                   rating: detail.voteAverage / 2,
                                   itemCount: 5,
-                                  itemBuilder: (context, index) =>
-                                  const Icon(
+                                  itemBuilder: (context, index) => const Icon(
                                     Icons.star,
                                     color: kMikadoYellow,
                                   ),
@@ -224,7 +224,8 @@ class DetailContent extends StatelessWidget {
                             const SizedBox(height: 16),
                             ListView.builder(
                               itemBuilder: (context, index) {
-                                return SeasonCard(season: detail.seasons[index]);
+                                return SeasonCard(
+                                    season: detail.seasons[index]);
                               },
                               shrinkWrap: true,
                               itemCount: detail.seasons.length,
@@ -243,16 +244,17 @@ class DetailContent extends StatelessWidget {
                                     child: CircularProgressIndicator(),
                                   );
                                 } else if (state
-                                is TVSeriesRecommendationError) {
+                                    is TVSeriesRecommendationError) {
                                   return Text(state.message);
                                 } else if (state
-                                is TVSeriesRecommendationHasData) {
+                                    is TVSeriesRecommendationHasData) {
                                   return SizedBox(
                                     height: 150,
                                     child: ListView.builder(
                                       scrollDirection: Axis.horizontal,
                                       itemBuilder: (context, index) {
-                                        final recommendation = state.result[index];
+                                        final recommendation =
+                                            state.result[index];
                                         return Padding(
                                           padding: const EdgeInsets.all(4.0),
                                           child: InkWell(
@@ -264,18 +266,21 @@ class DetailContent extends StatelessWidget {
                                               );
                                             },
                                             child: ClipRRect(
-                                              borderRadius: const BorderRadius.all(
+                                              borderRadius:
+                                                  const BorderRadius.all(
                                                 Radius.circular(8),
                                               ),
                                               child: CachedNetworkImage(
-                                                imageUrl: 'https://image.tmdb.org/t/p/w500${recommendation.posterPath}',
+                                                imageUrl:
+                                                    'https://image.tmdb.org/t/p/w500${recommendation.posterPath}',
                                                 placeholder: (context, url) =>
-                                                const Center(
-                                                  child: CircularProgressIndicator(),
+                                                    const Center(
+                                                  child:
+                                                      CircularProgressIndicator(),
                                                 ),
                                                 errorWidget:
                                                     (context, url, error) =>
-                                                const Icon(Icons.error),
+                                                        const Icon(Icons.error),
                                               ),
                                             ),
                                           ),

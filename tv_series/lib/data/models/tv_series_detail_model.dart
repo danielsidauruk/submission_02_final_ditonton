@@ -80,25 +80,6 @@ class TVSeriesDetailResponse extends Equatable {
         "vote_count": voteCount,
       };
 
-  // TVSeriesDetail toEntity() {
-  //   return TVSeriesDetail(
-  //       adult: this.adult,
-  //       backdropPath: this.backdropPath,
-  //       episodeRunTime: this.episodeRunTime,
-  //       firstAirDate: this.firstAirDate,
-  //       genres: this.genres.map((genre) => genre.toEntity()).toList(),
-  //       id: this.id,
-  //       lastAirDate: this.lastAirDate,
-  //       name: this.name,
-  //       numberOfEpisodes: this.numberOfEpisodes,
-  //       numberOfSeasons: this.numberOfSeasons,
-  //       originalName: this.originalName,
-  //       overview: this.overview,
-  //       posterPath: this.posterPath,
-  //       seasons: this.seasons.map((season) => season.toEntity()).toList(),
-  //       voteAverage: this.voteAverage,
-  //       voteCount: this.voteCount);
-  // }
   TVSeriesDetail toEntity() {
     return TVSeriesDetail(
         adult: adult,
