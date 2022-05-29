@@ -6,7 +6,7 @@ import 'package:mocktail/mocktail.dart';
 import 'package:flutter/material.dart';
 import 'package:movie/movie.dart';
 
-import '../../dummy_data/dummy_objects.dart';
+import '../../../../test/dummy_data/dummy_object.dart';
 
 class MockMovieDetailBloc extends MockBloc<MovieDetailEvent, MovieDetailState>
     implements MovieDetailBloc {}

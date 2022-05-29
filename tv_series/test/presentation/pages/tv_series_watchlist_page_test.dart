@@ -6,16 +6,14 @@ import 'package:mockito/annotations.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:tv_series/tv_series.dart';
 
-import 'tv_series_detail_page_test.dart';
-
-class MockWatchlistTVSeriesBloc
+class MockTVSeriesWatchlistBloc
     extends MockBloc<TVSeriesWatchlistEvent, TVSeriesWatchlistState>
     implements TVSeriesWatchlistBloc {}
 
-class WatchlistTVSeriesEventFake extends Fake
+class TVSeriesWatchlistEventFake extends Fake
     implements TVSeriesWatchlistEvent {}
 
-class WatchlistTVSeriesStateFake extends Fake
+class TVSeriesWatchlistStateFake extends Fake
     implements TVSeriesWatchlistState {}
 
 @GenerateMocks([TVSeriesWatchlistBloc])
@@ -57,7 +55,7 @@ void main() {
   testWidgets('Page should display ListView when data is loaded',
       (WidgetTester tester) async {
     when(() => mockTVSeriesWatchlistBloc.state)
-      .thenReturn(const TVSeriesWatchlistHasData(<TVSeries>[]));
+        .thenReturn(const TVSeriesWatchlistHasData(<TVSeries>[]));
 
     final listViewFinder = find.byType(ListView);
 

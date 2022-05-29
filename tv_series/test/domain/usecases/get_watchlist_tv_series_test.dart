@@ -4,7 +4,7 @@ import 'package:mockito/mockito.dart';
 import 'package:tv_series/tv_series.dart';
 
 import '../../../../core/test/helpers/test_helper.mocks.dart';
-import '../../dummy_data/dummy_object.dart';
+import '../../../../test/dummy_data/dummy_object.dart';
 
 void main() {
   late GetWatchlistTVSeries usecase;

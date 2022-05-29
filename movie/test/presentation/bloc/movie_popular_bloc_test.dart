@@ -8,7 +8,7 @@ import 'package:dartz/dartz.dart';
 import 'package:movie/movie.dart';
 import 'package:core/core.dart';
 
-import '../../dummy_data/dummy_objects.dart';
+import '../../../../test/dummy_data/dummy_object.dart';
 
 @GenerateMocks([GetPopularMovies])
 void main() {

@@ -1,0 +1,26 @@
+{
+  "page": 1,
+  "results": [
+    {
+      "adult": false,
+      "backdrop_path": "/path.jpg",
+      "genre_ids": [
+        1,
+        2,
+        3
+      ],
+      "id": 1,
+      "media_type": "tv",
+      "name": "Name",
+      "original_name": "Original Name",
+      "overview": "Overview",
+      "popularity": 1.0,
+      "poster_path": "/path.jpg",
+      "first_air_date": "2010-10-31",
+      "vote_average": 1.0,
+      "vote_count": 1
+    }
+  ],
+  "total_pages": 2,
+  "total_results": 40
+}

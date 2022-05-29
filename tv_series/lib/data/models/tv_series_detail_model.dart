@@ -1,10 +1,9 @@
-import 'package:core/data/models/genre_model.dart';
-import 'package:core/data/models/season_model.dart';
-import 'package:tv_series/domain/entities/tv_series_detail.dart';
+import 'package:tv_series/tv_series.dart';
 import 'package:equatable/equatable.dart';
+import 'package:core/core.dart';
 
-class TVSeriesDetailModel extends Equatable {
-  const TVSeriesDetailModel({
+class TVSeriesDetailResponse extends Equatable {
+  const TVSeriesDetailResponse({
     required this.adult,
     required this.backdropPath,
     required this.episodeRunTime,
@@ -40,8 +39,8 @@ class TVSeriesDetailModel extends Equatable {
   final double voteAverage;
   final int voteCount;
 
-  factory TVSeriesDetailModel.fromJson(Map<String, dynamic> json) =>
-      TVSeriesDetailModel(
+  factory TVSeriesDetailResponse.fromJson(Map<String, dynamic> json) =>
+      TVSeriesDetailResponse(
         adult: json["adult"],
         backdropPath: json["backdrop_path"],
         episodeRunTime: List<int>.from(json["episode_run_time"].map((x) => x)),
@@ -81,24 +80,43 @@ class TVSeriesDetailModel extends Equatable {
         "vote_count": voteCount,
       };
 
+  // TVSeriesDetail toEntity() {
+  //   return TVSeriesDetail(
+  //       adult: this.adult,
+  //       backdropPath: this.backdropPath,
+  //       episodeRunTime: this.episodeRunTime,
+  //       firstAirDate: this.firstAirDate,
+  //       genres: this.genres.map((genre) => genre.toEntity()).toList(),
+  //       id: this.id,
+  //       lastAirDate: this.lastAirDate,
+  //       name: this.name,
+  //       numberOfEpisodes: this.numberOfEpisodes,
+  //       numberOfSeasons: this.numberOfSeasons,
+  //       originalName: this.originalName,
+  //       overview: this.overview,
+  //       posterPath: this.posterPath,
+  //       seasons: this.seasons.map((season) => season.toEntity()).toList(),
+  //       voteAverage: this.voteAverage,
+  //       voteCount: this.voteCount);
+  // }
   TVSeriesDetail toEntity() {
     return TVSeriesDetail(
-        adult: this.adult,
-        backdropPath: this.backdropPath,
-        episodeRunTime: this.episodeRunTime,
-        firstAirDate: this.firstAirDate,
-        genres: this.genres.map((genre) => genre.toEntity()).toList(),
-        id: this.id,
-        lastAirDate: this.lastAirDate,
-        name: this.name,
-        numberOfEpisodes: this.numberOfEpisodes,
-        numberOfSeasons: this.numberOfSeasons,
-        originalName: this.originalName,
-        overview: this.overview,
-        posterPath: this.posterPath,
-        seasons: this.seasons.map((season) => season.toEntity()).toList(),
-        voteAverage: this.voteAverage,
-        voteCount: this.voteCount);
+        adult: adult,
+        backdropPath: backdropPath,
+        episodeRunTime: episodeRunTime,
+        firstAirDate: firstAirDate,
+        genres: genres.map((genre) => genre.toEntity()).toList(),
+        id: id,
+        lastAirDate: lastAirDate,
+        name: name,
+        numberOfEpisodes: numberOfEpisodes,
+        numberOfSeasons: numberOfSeasons,
+        originalName: originalName,
+        overview: overview,
+        posterPath: posterPath,
+        seasons: seasons.map((season) => season.toEntity()).toList(),
+        voteAverage: voteAverage,
+        voteCount: voteCount);
   }
 
   @override

@@ -4,7 +4,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 
 import '../../../../core/test/helpers/test_helper.mocks.dart';
-import '../../dummy_data/dummy_object.dart';
+import '../../../../test/dummy_data/dummy_object.dart';
 
 void main() {
   late RemoveWatchlistTVSeries usecase;

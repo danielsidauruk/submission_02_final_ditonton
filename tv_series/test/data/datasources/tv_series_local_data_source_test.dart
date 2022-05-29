@@ -3,7 +3,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:tv_series/tv_series.dart';
 
-import '../../dummy_data/dummy_object.dart';
+import '../../../../test/dummy_data/dummy_object.dart';
 import '../../../../core/test/helpers/test_helper.mocks.dart';
 
 void main() {

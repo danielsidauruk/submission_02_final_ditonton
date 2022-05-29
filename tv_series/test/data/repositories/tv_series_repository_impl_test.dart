@@ -6,7 +6,7 @@ import 'package:core/core.dart';
 import 'package:tv_series/tv_series.dart';
 
 import '../../../../core/test/helpers/test_helper.mocks.dart';
-import '../../dummy_data/dummy_object.dart';
+import '../../../../test/dummy_data/dummy_object.dart';
 
 void main() {
   late TVSeriesRepositoryImpl repository;
@@ -182,7 +182,7 @@ void main() {
 
   group('Get TVSeries Detail', () {
     const tId = 1;
-    const tTVSeriesResponse = TVSeriesDetailModel(
+    const tTVSeriesResponse = TVSeriesDetailResponse(
       adult: false,
       backdropPath: '/path.jpg',
       episodeRunTime: [60],

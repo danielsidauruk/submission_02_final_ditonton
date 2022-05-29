@@ -6,7 +6,7 @@ import 'package:mocktail/mocktail.dart';
 import 'package:tv_series/tv_series.dart';
 import 'package:mockito/annotations.dart';
 
-import '../../dummy_data/dummy_object.dart';
+import '../../../../test/dummy_data/dummy_object.dart';
 
 
 class MockTVSeriesDetailBloc

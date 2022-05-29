@@ -49,8 +49,8 @@ class _FakeEither_0<L, R> extends _i1.Fake implements _i2.Either<L, R> {}
 class _FakeMovieDetailResponse_1 extends _i1.Fake
     implements _i3.MovieDetailResponse {}
 
-class _FakeTvDetailModel_2 extends _i1.Fake implements _i4.TVSeriesDetailModel {
-}
+class _FakeTvDetailModel_2 extends _i1.Fake
+    implements _i4.TVSeriesDetailResponse {}
 
 class _FakeResponse_3 extends _i1.Fake implements _i5.Response {}
 
@@ -347,11 +347,11 @@ class MockTVSeriesRemoteDataSource extends _i1.Mock
           returnValue: Future<List<_i21.TVSeriesModel>>.value(
               <_i21.TVSeriesModel>[])) as _i7.Future<List<_i21.TVSeriesModel>>);
   @override
-  _i7.Future<_i4.TVSeriesDetailModel> getTVSeriesDetail(int? id) =>
+  _i7.Future<_i4.TVSeriesDetailResponse> getTVSeriesDetail(int? id) =>
       (super.noSuchMethod(Invocation.method(#getTVSeriesDetail, [id]),
-              returnValue:
-                  Future<_i4.TVSeriesDetailModel>.value(_FakeTvDetailModel_2()))
-          as _i7.Future<_i4.TVSeriesDetailModel>);
+              returnValue: Future<_i4.TVSeriesDetailResponse>.value(
+                  _FakeTvDetailModel_2()))
+          as _i7.Future<_i4.TVSeriesDetailResponse>);
   @override
   _i7.Future<List<_i21.TVSeriesModel>> getTVSeriesRecommendations(int? id) =>
       (super.noSuchMethod(Invocation.method(#getTVSeriesRecommendations, [id]),

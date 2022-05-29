@@ -1,0 +1,21 @@
+{
+  "adult": false,
+  "backdrop_path": "/path.jpg",
+  "first_air_date": "2010-10-31",
+  "genres": [
+    {
+      "id": 1,
+      "name": "Action"
+    }
+  ],
+  "id": 1,
+  "last_air_date": "2022-04-03",
+  "name": "name",
+  "number_of_episodes": 1,
+  "number_of_seasons": 1,
+  "overview": "Overview",
+  "popularity": 1.0,
+  "poster_path": "/path.jpg",
+  "vote_average": 1.0,
+  "vote_count": 1
+}

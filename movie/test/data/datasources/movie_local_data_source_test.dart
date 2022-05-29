@@ -4,7 +4,7 @@ import 'package:movie/movie.dart';
 import 'package:core/core.dart';
 
 import '../../../../core/test/helpers/test_helper.mocks.dart';
-import '../../dummy_data/dummy_objects.dart';
+import '../../../../test/dummy_data/dummy_object.dart';
 
 void main() {
   late MovieLocalDataSourceImpl dataSource;
