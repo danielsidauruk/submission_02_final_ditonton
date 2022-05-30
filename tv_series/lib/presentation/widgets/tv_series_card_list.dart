@@ -6,10 +6,7 @@ import 'package:core/core.dart';
 class TVSeriesCard extends StatelessWidget {
   final TVSeries item;
 
-  const TVSeriesCard({
-    Key? key,
-    required this.item
-  }) : super(key: key);
+  const TVSeriesCard({Key? key, required this.item}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -59,10 +56,9 @@ class TVSeriesCard extends StatelessWidget {
               ),
               child: ClipRRect(
                 child: CachedNetworkImage(
-                  imageUrl: '$BASE_IMAGE_URL${item.posterPath}',
+                  imageUrl: '$baseImageURL${item.posterPath}',
                   width: 80,
-                  placeholder: (context, url) =>
-                  const Center(
+                  placeholder: (context, url) => const Center(
                     child: CircularProgressIndicator(),
                   ),
                   errorWidget: (context, url, error) => const Icon(Icons.error),

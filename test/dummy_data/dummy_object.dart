@@ -58,48 +58,28 @@ final testMovieMap = {
 };
 
 final testTVSeries = TVSeries(
-  backdropPath: '/wvdWb5kTQipdMDqCclC6Y3zr4j3.jpg',
-  genreIds: const [10759, 18, 10765],
-  id: 1402,
+  backdropPath: "/rcA17r3hfHtRrk3Xs3hXrgGeSGT.jpg",
+  genreIds: const [18, 9648, 10765],
+  id: 66732,
+  name: 'Stranger Things',
+  originalName: 'Stranger Things',
   overview:
-      'Sheriff\'s deputy Rick Grimes awakens from a coma to find a post-apocalyptic world dominated by flesh-eating zombies. He sets out to find his family and encounters many other survivors along the way.',
-  popularity: 1832.419,
-  posterPath: '/xf9wuDcqlUPWABZNeDKPbZUjWx0.jpg',
-  firstAirDate: '2010-10-31',
-  name: 'The Walking Dead',
-  originalName: 'The Walking Dead',
-  voteAverage: 8.1,
-  voteCount: 12859,
+      'When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces, and one strange little girl.',
+  popularity: 3587.573,
+  posterPath: '/x2LSRK2Cm7MZhjluni1msVJ3wDF.jpg',
+  firstAirDate: '2016-07-15',
+  voteAverage: 8.6,
+  voteCount: 10177
 );
 
-final testTv = TVSeries(
-  backdropPath: '/q8eejQcg1bAqImEV8jh8RtBD4uH.jpg',
-  firstAirDate: '2021-11-06',
-  genreIds: const [
-    16,
-    10765,
-    10759,
-    18,
-  ],
-  id: 94605,
-  name: 'Arcane',
-  originalName: 'Arcane',
-  overview:
-      'Amid the stark discord of twin cities Piltover and Zaun, two sisters fight on rival sides of a war between magic technologies and clashing convictions.',
-  popularity: 218.007,
-  posterPath: '/fqldf2t8ztc9aiwn3k6mlX3tvRT.jpg',
-  voteAverage: 9.1,
-  voteCount: 1869,
-);
-
-final testTVSeriesList = [testTv];
+final testTVSeriesList = [testTVSeries];
 
 final testTVSeriesDetail = TVSeriesDetail(
   adult: false,
   backdropPath: '/path.jpg',
   episodeRunTime: const [60],
   firstAirDate: 'firstAirDate',
-  genres: [Genre(id: 1, name: 'Action')],
+  genres: [Genre(id: 1, name: 'supernatural')],
   id: 1,
   lastAirDate: 'lastAirDate',
   name: 'name',
@@ -111,7 +91,7 @@ final testTVSeriesDetail = TVSeriesDetail(
   seasons: const [
     Season(
       airDate: 'airDate',
-      episodeCount: 12,
+      episodeCount: 16,
       id: 1,
       name: 'name',
       overview: 'overview',

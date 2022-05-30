@@ -3,17 +3,16 @@
 // Do not manually edit this file.
 
 import 'dart:async' as _i5;
-
-import 'package:core/utils/failure.dart' as _i6;
+import 'package:core/core.dart' as _i6;
 import 'package:dartz/dartz.dart' as _i2;
 import 'package:mockito/mockito.dart' as _i1;
-import 'package:movie/domain/entities/movie.dart' as _i7;
-import 'package:movie/domain/entities/movie_detail.dart' as _i10;
-import 'package:movie/domain/repositories/movie_repository.dart' as _i3;
-import 'package:movie/domain/usecases/get_watchlist_status.dart' as _i8;
-import 'package:movie/domain/usecases/get_watchlist_movies.dart' as _i4;
-import 'package:movie/domain/usecases/remove_watchlist.dart' as _i11;
-import 'package:movie/domain/usecases/save_watchlist.dart' as _i9;
+import 'package:movie/movie.dart' as _i7;
+import 'package:movie/movie.dart' as _i10;
+import 'package:movie/movie.dart' as _i3;
+import 'package:movie/movie.dart' as _i8;
+import 'package:movie/movie.dart' as _i4;
+import 'package:movie/movie.dart' as _i11;
+import 'package:movie/movie.dart' as _i9;
 
 // ignore_for_file: type=lint
 // ignore_for_file: avoid_redundant_argument_values
@@ -68,8 +67,7 @@ class MockGetWatchListMovieStatus extends _i1.Mock
 /// A class which mocks [SaveMovieWatchlist].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockSaveMovieWatchlist extends _i1.Mock
-    implements _i9.SaveWatchlist {
+class MockSaveMovieWatchlist extends _i1.Mock implements _i9.SaveWatchlist {
   MockSaveMovieWatchlist() {
     _i1.throwOnMissingStub(this);
   }

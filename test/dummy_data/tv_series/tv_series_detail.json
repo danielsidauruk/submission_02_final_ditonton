@@ -2,17 +2,17 @@
   "adult": false,
   "backdrop_path": "/path.jpg",
   "episode_run_time": [
-    42
+    16
   ],
-  "first_air_date": "2010-10-31",
+  "first_air_date": "2016-07-15",
   "genres": [
     {
       "id": 1,
-      "name": "Action"
+      "name": "supernatural"
     }
   ],
   "id": 1,
-  "last_air_date": "2022-04-03",
+  "last_air_date": "2022-05-29",
   "name": "name",
   "original_name" : "original_name",
   "number_of_episodes": 1,
@@ -22,9 +22,9 @@
   "poster_path": "/path.jpg",
   "seasons": [
     {
-      "air_date": "2021-11-06",
-      "episode_count": 9,
-      "id": 134187,
+      "air_date": "2022-05-29",
+      "episode_count": 1,
+      "id": 1,
       "name": "Season 1",
       "overview": "",
       "poster_path": "/path.jpg",

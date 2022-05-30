@@ -1,11 +1,6 @@
 import 'package:bloc/bloc.dart';
+import 'package:movie/movie.dart';
 import 'package:equatable/equatable.dart';
-import 'package:movie/domain/entities/movie.dart';
-import 'package:movie/domain/entities/movie_detail.dart';
-import 'package:movie/domain/usecases/get_watchlist_status.dart';
-import 'package:movie/domain/usecases/get_watchlist_movies.dart';
-import 'package:movie/domain/usecases/remove_watchlist.dart';
-import 'package:movie/domain/usecases/save_watchlist.dart';
 
 part 'movie_watchlist_event.dart';
 part 'movie_watchlist_state.dart';

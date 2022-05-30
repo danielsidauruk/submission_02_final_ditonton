@@ -1,0 +1,47 @@
+{
+  "page":1,
+  "results":[
+    {
+      "backdrop_path":"/rcA17r3hfHtRrk3Xs3hXrgGeSGT.jpg",
+      "first_air_date":"2016-07-15",
+      "genre_ids":[
+        18,
+        9648,
+        10765
+      ],
+      "id":66732,
+      "name":"Stranger Things",
+      "origin_country":[
+        "US"
+      ],
+      "original_language":"en",
+      "original_name":"Stranger Things",
+      "overview":"When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces, and one strange little girl.",
+      "popularity":3587.573,
+      "poster_path":"/x2LSRK2Cm7MZhjluni1msVJ3wDF.jpg",
+      "vote_average":8.6,
+      "vote_count":10177
+    },
+    {
+      "backdrop_path":"/qevaCqIekzc7Bp5f2kGAi92kO39.jpg",
+      "first_air_date":"2017-10-27",
+      "genre_ids":[
+        10767
+      ],
+      "id":74851,
+      "name":"Beyond Stranger Things",
+      "origin_country":[
+        "US"
+      ],
+      "original_language":"en",
+      "original_name":"Beyond Stranger Things",
+      "overview":"Secrets from the \"Stranger Things 2\" universe are revealed as cast and guests discuss the latest episodes with host Jim Rash. Caution: spoilers ahead!",
+      "popularity":432.523,
+      "poster_path":"/pixcHLGqLYuMMHdRHmIC0oLsgbp.jpg",
+      "vote_average":7.2,
+      "vote_count":52
+    }
+  ],
+  "total_pages":1,
+  "total_results":2
+}

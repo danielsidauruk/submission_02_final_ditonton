@@ -3,14 +3,12 @@
   "results": [
     {
       "backdrop_path": "/path.jpg",
-      "first_air_date": "2010-10-31",
+      "first_air_date": "2016-07-15",
       "genre_ids": [
         1,
-        2,
-        3,
-        4
+        2
       ],
-      "id": 52814,
+      "id": 12345,
       "name": "name",
       "original_name": "Original Name",
       "overview": "Overview",
@@ -20,6 +18,6 @@
       "vote_count": 1
     }
   ],
-  "total_pages": 56,
-  "total_results": 1101
+  "total_pages": 11,
+  "total_results": 1107
 }

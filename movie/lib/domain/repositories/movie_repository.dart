@@ -1,6 +1,5 @@
 import 'package:dartz/dartz.dart';
-import 'package:movie/domain/entities/movie.dart';
-import 'package:movie/domain/entities/movie_detail.dart';
+import 'package:movie/movie.dart';
 import 'package:core/core.dart';
 
 abstract class MovieRepository {

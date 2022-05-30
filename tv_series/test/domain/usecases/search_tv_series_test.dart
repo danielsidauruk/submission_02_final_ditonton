@@ -1,7 +1,7 @@
-import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:mockito/mockito.dart';
 import 'package:tv_series/tv_series.dart';
+import 'package:mockito/mockito.dart';
+import 'package:dartz/dartz.dart';
 
 import '../../../../core/test/helpers/test_helper.mocks.dart';
 
@@ -15,7 +15,7 @@ void main() {
   });
 
   final tTVSeries = <TVSeries>[];
-  const tQuery = 'Spiderman';
+  const tQuery = 'Stranger Things';
 
   test('should get list of TVSeries from the repository', () async {
     // arrange

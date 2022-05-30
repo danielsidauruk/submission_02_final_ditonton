@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:about/about.dart';
 import 'package:core/core.dart';
 
 class AppDrawer extends StatelessWidget {

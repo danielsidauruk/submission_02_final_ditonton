@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:mockito/mockito.dart';
 import 'package:tv_series/tv_series.dart';
+import 'package:mockito/mockito.dart';
 
 import '../../../../core/test/helpers/test_helper.mocks.dart';
 

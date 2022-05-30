@@ -8,7 +8,9 @@ import 'package:movie/movie.dart';
 import 'package:about/about.dart';
 import 'package:core/core.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await HttpSSLPinning.init();
   di.init();
   runApp(MyApp());
 }

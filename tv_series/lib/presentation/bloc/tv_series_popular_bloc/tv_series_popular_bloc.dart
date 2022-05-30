@@ -1,7 +1,6 @@
-import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:tv_series/domain/entities/tv_series.dart';
-import 'package:tv_series/domain/usecases/get_popular_tv_series.dart';
+import 'package:tv_series/tv_series.dart';
+import 'package:bloc/bloc.dart';
 
 part 'tv_series_popular_event.dart';
 part 'tv_series_popular_state.dart';
@@ -19,9 +18,9 @@ class TVSeriesPopularBloc
         final popularResult = await _getPopGetPopularTVSeries.execute();
 
         popularResult.fold(
-          (failure) => emit(TVSeriesPopularError(failure.message)),
-          (data) => emit(TVSeriesPopularHasData(data)));
-        },
+            (failure) => emit(TVSeriesPopularError(failure.message)),
+            (data) => emit(TVSeriesPopularHasData(data)));
+      },
     );
   }
 }

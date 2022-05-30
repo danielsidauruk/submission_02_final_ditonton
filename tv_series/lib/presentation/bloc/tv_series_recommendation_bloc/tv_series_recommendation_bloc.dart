@@ -1,7 +1,6 @@
-import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:tv_series/domain/entities/tv_series.dart';
-import 'package:tv_series/domain/usecases/get_tv_series_recommendations.dart';
+import 'package:tv_series/tv_series.dart';
+import 'package:bloc/bloc.dart';
 
 part 'tv_series_recommendation_event.dart';
 part 'tv_series_recommendation_state.dart';
@@ -21,8 +20,8 @@ class TVSeriesRecommendationBloc
           await _getTVSeriesRecommendations.execute(id);
 
       recommendationResult.fold(
-              (failure) => emit(TVSeriesRecommendationError(failure.message)),
-              (data) => emit(TVSeriesRecommendationHasData(data)));
-        });
+          (failure) => emit(TVSeriesRecommendationError(failure.message)),
+          (data) => emit(TVSeriesRecommendationHasData(data)));
+    });
   }
 }

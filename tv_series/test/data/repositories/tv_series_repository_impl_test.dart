@@ -1,9 +1,9 @@
-import 'dart:io';
-import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:mockito/mockito.dart';
-import 'package:core/core.dart';
 import 'package:tv_series/tv_series.dart';
+import 'package:mockito/mockito.dart';
+import 'package:dartz/dartz.dart';
+import 'package:core/core.dart';
+import 'dart:io';
 
 import '../../../../core/test/helpers/test_helper.mocks.dart';
 import '../../../../test/dummy_data/dummy_object.dart';
@@ -23,33 +23,33 @@ void main() {
   });
 
   const tTVSeriesModel = TVSeriesModel(
-    backdropPath: '/q8eejQcg1bAqImEV8jh8RtBD4uH.jpg',
-    firstAirDate: '2021-11-06',
-    genreIds: [16, 10765, 10759, 18],
-    id: 94605,
-    name: 'Arcane',
-    originalName: 'Arcane',
+    backdropPath: '/rcA17r3hfHtRrk3Xs3hXrgGeSGT.jpg',
+    firstAirDate: '2016-07-15',
+    genreIds: [18, 9648, 10765],
+    id: 66732,
+    name: 'Stranger Things',
+    originalName: 'Stranger Things',
     overview:
-        'Amid the stark discord of twin cities Piltover and Zaun, two sisters fight on rival sides of a war between magic technologies and clashing convictions.',
-    popularity: 218.007,
-    posterPath: '/fqldf2t8ztc9aiwn3k6mlX3tvRT.jpg',
-    voteAverage: 9.1,
-    voteCount: 1869,
+        'When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces, and one strange little girl.',
+    popularity: 3587.573,
+    posterPath: '/x2LSRK2Cm7MZhjluni1msVJ3wDF.jpg',
+    voteAverage: 8.6,
+    voteCount: 10177
   );
 
   final tTVSeries = TVSeries(
-    backdropPath: '/q8eejQcg1bAqImEV8jh8RtBD4uH.jpg',
-    firstAirDate: '2021-11-06',
-    genreIds: const [16, 10765, 10759, 18],
-    id: 94605,
-    name: 'Arcane',
-    originalName: 'Arcane',
+    backdropPath: '/rcA17r3hfHtRrk3Xs3hXrgGeSGT.jpg',
+    firstAirDate: '2016-07-15',
+    genreIds: const [18, 9648, 10765],
+    id: 66732,
+    name: 'Stranger Things',
+    originalName: 'Stranger Things',
     overview:
-        'Amid the stark discord of twin cities Piltover and Zaun, two sisters fight on rival sides of a war between magic technologies and clashing convictions.',
-    popularity: 218.007,
-    posterPath: '/fqldf2t8ztc9aiwn3k6mlX3tvRT.jpg',
-    voteAverage: 9.1,
-    voteCount: 1869,
+        'When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces, and one strange little girl.',
+    popularity: 3587.573,
+    posterPath: '/x2LSRK2Cm7MZhjluni1msVJ3wDF.jpg',
+    voteAverage: 8.6,
+    voteCount: 10177,
   );
 
   final tTVSeriesModelList = <TVSeriesModel>[tTVSeriesModel];
@@ -187,7 +187,7 @@ void main() {
       backdropPath: '/path.jpg',
       episodeRunTime: [60],
       firstAirDate: 'firstAirDate',
-      genres: [GenreModel(id: 1, name: 'Action')],
+      genres: [GenreModel(id: 1, name: 'supernatural')],
       id: 1,
       lastAirDate: 'lastAirDate',
       name: 'name',
@@ -199,7 +199,7 @@ void main() {
       seasons: [
         SeasonModel(
           airDate: 'airDate',
-          episodeCount: 12,
+          episodeCount: 16,
           id: 1,
           name: 'name',
           overview: 'overview',
@@ -303,7 +303,7 @@ void main() {
   });
 
   group('Search TVSeries', () {
-    const tQuery = 'spiderman';
+    const tQuery = 'Stranger Things';
 
     test('should return TVSeries list when call to data source is successful',
         () async {

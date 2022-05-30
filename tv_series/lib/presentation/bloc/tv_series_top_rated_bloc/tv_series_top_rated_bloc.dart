@@ -1,7 +1,6 @@
-import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:tv_series/domain/entities/tv_series.dart';
-import 'package:tv_series/domain/usecases/get_top_rated_tv_series.dart';
+import 'package:tv_series/tv_series.dart';
+import 'package:bloc/bloc.dart';
 
 part 'tv_series_top_rated_event.dart';
 part 'tv_series_top_rated_state.dart';
@@ -19,9 +18,9 @@ class TVSeriesTopRatedBloc
         final topRatedResult = await _getTopRatedTVSeries.execute();
 
         topRatedResult.fold(
-                (failure) => emit(TVSeriesTopRatedError(failure.message)),
-                (data) => emit(TVSeriesTopRatedHasData(data)));
-        },
+            (failure) => emit(TVSeriesTopRatedError(failure.message)),
+            (data) => emit(TVSeriesTopRatedHasData(data)));
+      },
     );
   }
 }

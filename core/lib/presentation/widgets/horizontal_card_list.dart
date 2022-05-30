@@ -6,11 +6,9 @@ class HorizontalCardList extends StatelessWidget {
   final String? posterPath;
   final Function onTap;
 
-  const HorizontalCardList({
-    Key? key,
-    required this.posterPath,
-    required this.onTap
-  }) : super(key: key);
+  const HorizontalCardList(
+      {Key? key, required this.posterPath, required this.onTap})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +19,7 @@ class HorizontalCardList extends StatelessWidget {
         child: ClipRRect(
           borderRadius: const BorderRadius.all(Radius.circular(16)),
           child: CachedNetworkImage(
-            imageUrl: '$BASE_IMAGE_URL$posterPath',
+            imageUrl: '$baseImageURL$posterPath',
             placeholder: (context, url) => const Center(
               child: CircularProgressIndicator(),
             ),

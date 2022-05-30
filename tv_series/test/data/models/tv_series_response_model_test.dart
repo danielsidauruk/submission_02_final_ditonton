@@ -1,7 +1,6 @@
-import 'dart:convert';
-import 'package:tv_series/data/models/tv_series_model.dart';
-import 'package:tv_series/data/models/tv_series_response.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:tv_series/tv_series.dart';
+import 'dart:convert';
 
 import '../../../../core/test/json_reader.dart';
 
@@ -63,3 +62,4 @@ void main() {
     });
   });
 }
+
