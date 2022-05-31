@@ -35,8 +35,8 @@ class _TVSeriesTopRatedPageState extends State<TVSeriesTopRatedPage> {
             } else if (state is TVSeriesTopRatedHasData) {
               return ListView.builder(
                 itemBuilder: (context, index) {
-                  final topRated = state.result[index];
-                  return TVSeriesCard(item: topRated);
+                  final topRatedTVSeries = state.result[index];
+                  return TVSeriesCard(item: topRatedTVSeries);
                 },
                 itemCount: state.result.length,
               );

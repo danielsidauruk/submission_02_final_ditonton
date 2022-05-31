@@ -58,7 +58,8 @@ class _HomeMoviePageState extends State<HomeMoviePage> {
                         child: CircularProgressIndicator(),
                       );
                     } else if (state is MovieNowPlayingHasData) {
-                      return MovieList(movies: state.result);
+                      final nowPlayingList = state.result;
+                      return MovieList(list: nowPlayingList);
                     } else if (state is MovieNowPlayingError) {
                       return Text(state.message);
                     } else {
@@ -77,7 +78,8 @@ class _HomeMoviePageState extends State<HomeMoviePage> {
                         child: CircularProgressIndicator(),
                       );
                     } else if (state is MoviePopularHasData) {
-                      return MovieList(movies: state.result);
+                      final popularList = state.result;
+                      return MovieList(list: popularList);
                     } else if (state is MoviePopularError) {
                       return Text(state.message);
                     } else {
@@ -96,7 +98,8 @@ class _HomeMoviePageState extends State<HomeMoviePage> {
                         child: CircularProgressIndicator(),
                       );
                     } else if (state is MovieTopRatedHasData) {
-                      return MovieList(movies: state.result);
+                      final topRatedList = state.result;
+                      return MovieList(list: topRatedList);
                     } else if (state is MovieTopRatedError) {
                       return Text(state.message);
                     } else {

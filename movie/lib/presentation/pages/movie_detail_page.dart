@@ -38,9 +38,9 @@ class _MovieDetailPageState extends State<MovieDetailPage> {
               child: CircularProgressIndicator(),
             );
           } else if (state is MovieDetailHasData) {
-            final movie = state.result;
+            final movieDetail = state.result;
             return SafeArea(
-              child: DetailContent(movie: movie)
+              child: DetailContent(detail: movieDetail)
               );
           } else if (state is MovieDetailError) {
             return Text(state.message);
@@ -54,9 +54,9 @@ class _MovieDetailPageState extends State<MovieDetailPage> {
 }
 
 class DetailContent extends StatelessWidget {
-  final MovieDetail movie;
+  final MovieDetail detail;
 
-  const DetailContent({Key? key, required this.movie})
+  const DetailContent({Key? key, required this.detail})
       : super(key: key);
 
   @override
@@ -65,7 +65,7 @@ class DetailContent extends StatelessWidget {
     return Stack(
       children: [
         CachedNetworkImage(
-          imageUrl: 'https://image.tmdb.org/t/p/w500${movie.posterPath}',
+          imageUrl: 'https://image.tmdb.org/t/p/w500${detail.posterPath}',
           width: screenWidth,
           placeholder: (context, url) => const Center(
             child: CircularProgressIndicator(),
@@ -96,7 +96,7 @@ class DetailContent extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              movie.title,
+                              detail.title,
                               style: kHeading5,
                             ),
                             BlocConsumer<MovieWatchlistBloc, MovieWatchlistState>(
@@ -122,11 +122,11 @@ class DetailContent extends StatelessWidget {
                                       if (state.isAdded == false) {
                                         context
                                             .read<MovieWatchlistBloc>()
-                                            .add(AddMovieWatchlist(movie));
+                                            .add(AddMovieWatchlist(detail));
                                       } else if (state.isAdded == true) {
                                         context
                                             .read<MovieWatchlistBloc>()
-                                            .add(DeleteMovieWatchlist(movie));
+                                            .add(DeleteMovieWatchlist(detail));
                                       }
                                     }
                                   },
@@ -145,15 +145,15 @@ class DetailContent extends StatelessWidget {
                               },
                             ),
                             Text(
-                              _showGenres(movie.genres),
+                              _showGenres(detail.genres),
                             ),
                             Text(
-                              _showDuration(movie.runtime),
+                              _showDuration(detail.runtime),
                             ),
                             Row(
                               children: [
                                 RatingBarIndicator(
-                                  rating: movie.voteAverage / 2,
+                                  rating: detail.voteAverage / 2,
                                   itemCount: 5,
                                   itemBuilder: (context, index) =>
                                   const Icon(
@@ -162,7 +162,7 @@ class DetailContent extends StatelessWidget {
                                   ),
                                   itemSize: 24,
                                 ),
-                                Text('${movie.voteAverage}')
+                                Text('${detail.voteAverage}')
                               ],
                             ),
                             const SizedBox(height: 16),
@@ -171,7 +171,7 @@ class DetailContent extends StatelessWidget {
                               style: kHeading6,
                             ),
                             Text(
-                              movie.overview,
+                              detail.overview,
                             ),
                             const SizedBox(height: 16),
                             Text(

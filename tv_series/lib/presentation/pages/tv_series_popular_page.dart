@@ -35,8 +35,8 @@ class _TVSeriesPopularPageState extends State<TVSeriesPopularPage> {
             } else if (state is TVSeriesPopularHasData) {
               return ListView.builder(
                 itemBuilder: (context, index) {
-                  final popular = state.result[index];
-                  return TVSeriesCard(item: popular);
+                  final popularTVSeries = state.result[index];
+                  return TVSeriesCard(item: popularTVSeries);
                 },
                 itemCount: state.result.length,
               );

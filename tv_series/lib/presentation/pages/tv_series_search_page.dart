@@ -10,7 +10,7 @@ class TVSeriesSearchPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Search'),
+        title: const Text('Search TV Series'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -40,15 +40,14 @@ class TVSeriesSearchPage extends StatelessWidget {
                     child: CircularProgressIndicator(),
                   );
                 } else if (state is SearchHasData) {
-                  final result = state.result;
                   return Expanded(
                     child: ListView.builder(
                       padding: const EdgeInsets.all(8),
                       itemBuilder: (context, index) {
-                        final search = state.result[index];
-                        return TVSeriesCard(item: search);
+                        final searchTVSeries = state.result[index];
+                        return TVSeriesCard(item: searchTVSeries);
                       },
-                      itemCount: result.length,
+                      itemCount: state.result.length,
                     ),
                   );
                 } else {

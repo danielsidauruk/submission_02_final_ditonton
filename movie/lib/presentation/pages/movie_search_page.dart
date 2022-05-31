@@ -10,7 +10,7 @@ class SearchPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Search'),
+        title: const Text('Search Movie'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -40,15 +40,14 @@ class SearchPage extends StatelessWidget {
                     child: CircularProgressIndicator(),
                   );
                 } else if (state is SearchHasData) {
-                  final result = state.result;
                   return Expanded(
                     child: ListView.builder(
                       padding: const EdgeInsets.all(8),
                       itemBuilder: (context, index) {
-                        final movie = state.result[index];
-                        return MovieCard(movie: movie);
+                        final searchMovie = state.result[index];
+                        return MovieCard(item: searchMovie);
                       },
-                      itemCount: result.length,
+                      itemCount: state.result.length,
                     ),
                   );
                 } else {

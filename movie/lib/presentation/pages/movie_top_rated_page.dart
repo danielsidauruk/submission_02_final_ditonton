@@ -35,8 +35,8 @@ class _TopRatedMoviesPageState extends State<TopRatedMoviesPage> {
             } else if (state is MovieTopRatedHasData) {
               return ListView.builder(
                 itemBuilder: (context, index) {
-                  final movie = state.result[index];
-                  return MovieCard(movie: movie);
+                  final topRatedMovie = state.result[index];
+                  return MovieCard(item: topRatedMovie);
                 },
                 itemCount: state.result.length,
               );

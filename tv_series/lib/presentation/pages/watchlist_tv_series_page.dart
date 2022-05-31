@@ -44,8 +44,8 @@ class _TVSeriesWatchlistPageState extends State<TVSeriesWatchlistPage>
         } else if (state is TVSeriesWatchlistHasData) {
           return ListView.builder(
             itemBuilder: (context, index) {
-              final watchlist = state.result[index];
-              return TVSeriesCard(item: watchlist);
+              final watchlistTVSeries = state.result[index];
+              return TVSeriesCard(item: watchlistTVSeries);
             },
             itemCount: state.result.length,
           );

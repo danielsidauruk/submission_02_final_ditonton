@@ -4,9 +4,9 @@ import 'package:movie/movie.dart';
 import 'package:core/core.dart';
 
 class MovieCard extends StatelessWidget {
-  final Movie movie;
+  final Movie item;
 
-  const MovieCard({Key? key, required this.movie}) : super(key: key);
+  const MovieCard({Key? key, required this.item}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,7 @@ class MovieCard extends StatelessWidget {
           Navigator.pushNamed(
             context,
             detailMovieRoute,
-            arguments: movie.id,
+            arguments: item.id,
           );
         },
         child: Stack(
@@ -34,14 +34,14 @@ class MovieCard extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      movie.title ?? '-',
+                      item.title ?? '-',
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                       style: kHeading6,
                     ),
                     const SizedBox(height: 16),
                     Text(
-                      movie.overview ?? '-',
+                      item.overview ?? '-',
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
                     ),
@@ -56,7 +56,7 @@ class MovieCard extends StatelessWidget {
               ),
               child: ClipRRect(
                 child: CachedNetworkImage(
-                  imageUrl: '$baseImageURL${movie.posterPath}',
+                  imageUrl: '$baseImageURL${item.posterPath}',
                   width: 80,
                   placeholder: (context, url) => const Center(
                     child: CircularProgressIndicator(),

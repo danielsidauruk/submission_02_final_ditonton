@@ -3,11 +3,11 @@ import 'package:movie/movie.dart';
 import 'package:core/core.dart';
 
 class MovieList extends StatelessWidget {
-  final List<Movie> movies;
+  final List<Movie> list;
 
   const MovieList({
     Key? key,
-    required this.movies
+    required this.list
   }) : super(key: key);
 
   @override
@@ -17,7 +17,7 @@ class MovieList extends StatelessWidget {
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
-          final movie = movies[index];
+          final movie = list[index];
           return HorizontalCardList(
             posterPath: movie.posterPath,
             onTap: () {
@@ -29,7 +29,7 @@ class MovieList extends StatelessWidget {
             },
           );
         },
-        itemCount: movies.length,
+        itemCount: list.length,
       ),
     );
   }

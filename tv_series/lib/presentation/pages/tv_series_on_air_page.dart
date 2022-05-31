@@ -35,8 +35,8 @@ class _TVSeriesOnAirPageState extends State<TVSeriesOnAirPage> {
           } else if (state is TVSeriesOnAirHasData) {
             return ListView.builder(
               itemBuilder: (context, index) {
-                final onAir = state.result[index];
-                return TVSeriesCard(item: onAir);
+                final onAirTVSeries = state.result[index];
+                return TVSeriesCard(item: onAirTVSeries);
               },
               itemCount: state.result.length,
             );
