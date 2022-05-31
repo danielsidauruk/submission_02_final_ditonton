@@ -55,15 +55,9 @@ class _TVSeriesDetailPageState extends State<TVSeriesDetailPage> {
 
 class DetailContent extends StatelessWidget {
   final TVSeriesDetail detail;
-  // final List<TVSeries> recommendations;
-  // final bool isAddedWatchlist;
 
-  const DetailContent({
-    Key? key,
-    required this.detail,
-    // required this.recommendations,
-    // required this.isAddedWatchlist
-  }) : super(key: key);
+  const DetailContent({Key? key, required this.detail,})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -200,22 +194,24 @@ class DetailContent extends StatelessWidget {
                                 Column(
                                   children: [
                                     Text(
-                                      "Total Episode",
-                                      style: kHeading6,
+                                      "Total ${_episode(detail.numberOfEpisodes)}",
+                                      style: kHeading5,
                                     ),
                                     Text(
-                                      "${(detail.numberOfEpisodes).toString()} episode",
+                                      (detail.numberOfEpisodes).toString(),
+                                      style: kHeading5,
                                     ),
                                   ],
                                 ),
                                 Column(
                                   children: [
                                     Text(
-                                      'Total Seasons',
+                                      "Total ${_season(detail.numberOfSeasons)}",
                                       style: kHeading6,
                                     ),
                                     Text(
-                                      '${(detail.numberOfSeasons).toString()} seasons',
+                                      (detail.numberOfSeasons).toString(),
+                                      style: kHeading5,
                                     ),
                                   ],
                                 ),
@@ -224,9 +220,9 @@ class DetailContent extends StatelessWidget {
                             const SizedBox(height: 16),
                             ListView.builder(
                               itemBuilder: (context, index) {
-                                return SeasonCard(
-                                    season: detail.seasons[index]);
-                              },
+                                final season = detail.seasons[index];
+                                return SeasonCard(item: season);
+                                },
                               shrinkWrap: true,
                               itemCount: detail.seasons.length,
                               physics: const NeverScrollableScrollPhysics(),
@@ -253,7 +249,7 @@ class DetailContent extends StatelessWidget {
                                     child: ListView.builder(
                                       scrollDirection: Axis.horizontal,
                                       itemBuilder: (context, index) {
-                                        final recommendation =
+                                        final recommendations =
                                             state.result[index];
                                         return Padding(
                                           padding: const EdgeInsets.all(4.0),
@@ -262,7 +258,7 @@ class DetailContent extends StatelessWidget {
                                               Navigator.pushReplacementNamed(
                                                 context,
                                                 detailTVSeriesRoute,
-                                                arguments: recommendation.id,
+                                                arguments: recommendations.id,
                                               );
                                             },
                                             child: ClipRRect(
@@ -272,7 +268,7 @@ class DetailContent extends StatelessWidget {
                                               ),
                                               child: CachedNetworkImage(
                                                 imageUrl:
-                                                    'https://image.tmdb.org/t/p/w500${recommendation.posterPath}',
+                                                    'https://image.tmdb.org/t/p/w500${recommendations.posterPath}',
                                                 placeholder: (context, url) =>
                                                     const Center(
                                                   child:
@@ -335,18 +331,15 @@ class DetailContent extends StatelessWidget {
     for (var genre in genres) {
       result += genre.name + ', ';
     }
-
     if (result.isEmpty) {
       return result;
     }
-
     return result.substring(0, result.length - 2);
   }
 
   String _showDuration(int runtime) {
     final int hours = runtime ~/ 60;
     final int minutes = runtime % 60;
-
     if (hours > 0) {
       return '${hours}h ${minutes}m';
     } else {
@@ -356,5 +349,13 @@ class DetailContent extends StatelessWidget {
 
   String _showNumberOfSeasons(int total) {
     return '$total ${total > 1 ? 'seasons' : 'season'}';
+  }
+
+  String _season(int season){
+    return season > 1 ? 'seasons' : 'season';
+  }
+
+  String _episode(int episode){
+    return episode > 1 ? 'episodes' : 'episode';
   }
 }

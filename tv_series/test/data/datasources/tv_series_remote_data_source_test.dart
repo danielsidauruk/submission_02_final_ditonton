@@ -168,7 +168,6 @@ void main() {
 
   group('search TVSeries', () {
     final tSearchResult = TVSeriesResponse.fromJson(
-            // json.decode(readJson('dummy_data/tv_series/search_my_liberation_notes.json')))
             json.decode(readJson(
                 'dummy_data/tv_series/tv_series_search_stranger_things.json')))
         .tvSeriesList;
@@ -179,7 +178,6 @@ void main() {
       when(mockHttpClient
               .get(Uri.parse('$baseURL/search/tv?$apiKey&query=$tQuery')))
           .thenAnswer((_) async => http.Response(
-              // readJson('dummy_data/tv_series/search_my_liberation_notes.json'), 200));
               readJson(
                   'dummy_data/tv_series/tv_series_search_stranger_things.json'),
               200));

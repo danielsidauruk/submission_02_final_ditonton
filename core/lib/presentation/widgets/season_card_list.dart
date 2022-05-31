@@ -3,16 +3,16 @@ import 'package:flutter/material.dart';
 import 'package:core/core.dart';
 
 class SeasonCard extends StatelessWidget {
-  final Season season;
+  final Season item;
 
   const SeasonCard({
     Key? key,
-    required this.season
+    required this.item
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    String year = season.airDate?.substring(0, 4) ?? '-';
+    String year = item.airDate?.substring(0, 4) ?? '-';
 
     return Card(
       child: Padding(
@@ -21,7 +21,7 @@ class SeasonCard extends StatelessWidget {
           ClipRRect(
             borderRadius: BorderRadius.circular(5.0),
             child: CachedNetworkImage(
-              imageUrl: 'https://image.tmdb.org/t/p/w500${season.posterPath}',
+              imageUrl: 'https://image.tmdb.org/t/p/w500${item.posterPath}',
               placeholder: (context, url) => const Center(
                 child: CircularProgressIndicator(),
               ),
@@ -36,10 +36,10 @@ class SeasonCard extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                season.name,
+                item.name,
                 style: kSubtitle,
               ),
-              Text('${season.episodeCount} episodes'),
+              Text('${item.episodeCount} episodes'),
               const SizedBox(
                 height: 4.0,
               ),
