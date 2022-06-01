@@ -15,12 +15,12 @@ class MovieNowPlayingBloc
       (event, emit) async {
         emit(MovieNowPlayingLoading());
 
-        final onAirResult = await _getNowPlayingMovies.execute();
+        final nowPlayingResult = await _getNowPlayingMovies.execute();
 
-        onAirResult.fold(
-          (failure) => emit(MovieNowPlayingError(failure.message)),
-          (data) => emit(MovieNowPlayingHasData(data)));
-        },
+        nowPlayingResult.fold(
+            (failure) => emit(MovieNowPlayingError(failure.message)),
+            (data) => emit(MovieNowPlayingHasData(data)));
+      },
     );
   }
 }

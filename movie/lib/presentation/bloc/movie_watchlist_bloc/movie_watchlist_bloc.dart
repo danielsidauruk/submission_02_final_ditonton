@@ -21,9 +21,9 @@ class MovieWatchlistBloc
         final watchlistResult = await _getMovieWatchlist.execute();
 
         watchlistResult.fold(
-          (failure) => emit(MovieWatchlistError(failure.message)),
-          (data) => emit(MovieWatchlistHasData(data)));
-        },
+            (failure) => emit(MovieWatchlistError(failure.message)),
+            (data) => emit(MovieWatchlistHasData(data)));
+      },
     );
 
     on<LoadWatchlistStatus>(((event, emit) async {

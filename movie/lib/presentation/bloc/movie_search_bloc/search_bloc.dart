@@ -14,12 +14,10 @@ class SearchMoviesBloc extends Bloc<SearchEvent, SearchState> {
       final query = event.query;
 
       emit(SearchLoading());
-      final result = await _searchMovies.execute(query);
+      final searchResult = await _searchMovies.execute(query);
 
-      result.fold(
-        (failure) => emit(SearchError(failure.message)),
-        (data) => emit(SearchHasData(data))
-      );
-      }, transformer: debounce(const Duration(milliseconds: 500)));
+      searchResult.fold((failure) => emit(SearchError(failure.message)),
+          (data) => emit(SearchHasData(data)));
+    }, transformer: debounce(const Duration(milliseconds: 500)));
   }
 }
