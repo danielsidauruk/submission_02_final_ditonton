@@ -1,3 +1,4 @@
+import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tv_series/tv_series.dart';
 import 'package:flutter/material.dart';
@@ -35,6 +36,7 @@ class _TVSeriesHomePageState extends State<TVSeriesHomePage> {
         actions: [
           IconButton(
             onPressed: () {
+              // FirebaseCrashlytics.instance.crash();
               Navigator.pushNamed(context, searchTVSeriesRoute);
             },
             icon: const Icon(Icons.search),
