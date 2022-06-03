@@ -1,0 +1,36 @@
+{
+  "adult": false,
+  "backdrop_path": "/path.jpg",
+  "episode_run_time": [
+    16
+  ],
+  "first_air_date": "2016-07-15",
+  "genres": [
+    {
+      "id": 1,
+      "name": "supernatural"
+    }
+  ],
+  "id": 1,
+  "last_air_date": "2022-05-29",
+  "name": "name",
+  "original_name" : "original_name",
+  "number_of_episodes": 1,
+  "number_of_seasons": 1,
+  "overview": "Overview",
+  "popularity": 1.0,
+  "poster_path": "/path.jpg",
+  "seasons": [
+    {
+      "air_date": "2022-05-29",
+      "episode_count": 1,
+      "id": 1,
+      "name": "Season 1",
+      "overview": "",
+      "poster_path": "/path.jpg",
+      "season_number": 1
+    }
+  ],
+  "vote_average": 1.0,
+  "vote_count": 1
+}
