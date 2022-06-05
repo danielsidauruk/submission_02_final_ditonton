@@ -1,7 +1,7 @@
 import 'package:tv_series/tv_series.dart';
-import 'package:http/http.dart' as http;
 import 'package:get_it/get_it.dart';
 import 'package:movie/movie.dart';
+import 'package:core/core.dart';
 
 final locator = GetIt.instance;
 
@@ -144,5 +144,5 @@ void init() {
       () => DatabaseHelperTVSeries());
 
   // external
-  locator.registerLazySingleton(() => http.Client());
+  locator.registerLazySingleton(() => HttpSSLPinning.client);
 }

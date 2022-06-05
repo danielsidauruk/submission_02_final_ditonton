@@ -18,9 +18,13 @@ class TVSeriesRepositoryImpl implements TVSeriesRepository {
       final result = await tvSeriesRemoteDataSource.getOnAirTVSeries();
       return Right(result.map((model) => model.toEntity()).toList());
     } on ServerException {
-      return Left(ServerFailure(''));
+      return const Left(ServerFailure(''));
     } on SocketException {
-      return Left(ConnectionFailure('Failed to connect to the network'));
+      return const Left(ConnectionFailure('Failed to connect to the network'));
+    } on TlsException catch (e) {
+      return Left(SSLFailure('CERTIFICATE_VERIFY_FAILED\n${e.message}'));
+    } catch (e) {
+      return Left(SSLFailure(e.toString()));
     }
   }
 
@@ -30,9 +34,13 @@ class TVSeriesRepositoryImpl implements TVSeriesRepository {
       final result = await tvSeriesRemoteDataSource.getTVSeriesDetail(id);
       return Right(result.toEntity());
     } on ServerException {
-      return Left(ServerFailure(''));
+      return const Left(ServerFailure(''));
     } on SocketException {
-      return Left(ConnectionFailure('Failed to connect to the network'));
+      return const Left(ConnectionFailure('Failed to connect to the network'));
+    } on TlsException catch (e) {
+      return Left(SSLFailure('CERTIFICATE_VERIFY_FAILED\n${e.message}'));
+    } catch (e) {
+      return Left(SSLFailure(e.toString()));
     }
   }
 
@@ -44,9 +52,13 @@ class TVSeriesRepositoryImpl implements TVSeriesRepository {
           await tvSeriesRemoteDataSource.getTVSeriesRecommendations(id);
       return Right(result.map((model) => model.toEntity()).toList());
     } on ServerException {
-      return Left(ServerFailure(''));
+      return const Left(ServerFailure(''));
     } on SocketException {
-      return Left(ConnectionFailure('Failed to connect to the network'));
+      return const Left(ConnectionFailure('Failed to connect to the network'));
+    } on TlsException catch (e) {
+      return Left(SSLFailure('CERTIFICATE_VERIFY_FAILED\n${e.message}'));
+    } catch (e) {
+      return Left(SSLFailure(e.toString()));
     }
   }
 
@@ -56,9 +68,13 @@ class TVSeriesRepositoryImpl implements TVSeriesRepository {
       final result = await tvSeriesRemoteDataSource.getPopularTVSeries();
       return Right(result.map((model) => model.toEntity()).toList());
     } on ServerException {
-      return Left(ServerFailure(''));
+      return const Left(ServerFailure(''));
     } on SocketException {
-      return Left(ConnectionFailure('Failed to connect to the network'));
+      return const Left(ConnectionFailure('Failed to connect to the network'));
+    } on TlsException catch (e) {
+      return Left(SSLFailure('CERTIFICATE_VERIFY_FAILED\n${e.message}'));
+    } catch (e) {
+      return Left(SSLFailure(e.toString()));
     }
   }
 
@@ -68,9 +84,13 @@ class TVSeriesRepositoryImpl implements TVSeriesRepository {
       final result = await tvSeriesRemoteDataSource.getTopRatedTVSeries();
       return Right(result.map((model) => model.toEntity()).toList());
     } on ServerException {
-      return Left(ServerFailure(''));
+      return const Left(ServerFailure(''));
     } on SocketException {
-      return Left(ConnectionFailure('Failed to connect to the network'));
+      return const Left(ConnectionFailure('Failed to connect to the network'));
+    } on TlsException catch (e) {
+      return Left(SSLFailure('CERTIFICATE_VERIFY_FAILED\n${e.message}'));
+    } catch (e) {
+      return Left(SSLFailure(e.toString()));
     }
   }
 
@@ -80,9 +100,13 @@ class TVSeriesRepositoryImpl implements TVSeriesRepository {
       final result = await tvSeriesRemoteDataSource.searchTVSeries(query);
       return Right(result.map((model) => model.toEntity()).toList());
     } on ServerException {
-      return Left(ServerFailure(''));
+      return const Left(ServerFailure(''));
     } on SocketException {
-      return Left(ConnectionFailure('Failed to connect to the network'));
+      return const Left(ConnectionFailure('Failed to connect to the network'));
+    } on TlsException catch (e) {
+      return Left(SSLFailure('CERTIFICATE_VERIFY_FAILED\n${e.message}'));
+    } catch (e) {
+      return Left(SSLFailure(e.toString()));
     }
   }
 
@@ -95,7 +119,7 @@ class TVSeriesRepositoryImpl implements TVSeriesRepository {
     } on DatabaseException catch (e) {
       return Left(DatabaseFailure(e.message));
     } catch (e) {
-      throw e;
+      rethrow;
     }
   }
 
